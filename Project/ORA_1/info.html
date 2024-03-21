@@ -140,12 +140,9 @@
             </div>
 
             <div class="button-container">
-                <!-- <a href="./index.html" class="ok-button"> -->
-                    <input type="submit" name="" id="" value="OK" onclick="submitForm('ok')">
-                <!-- </a> -->
-                <!-- <a href="./index.html" class="cancel-button">Cancel</a> -->
-                    <input type="submit" name="" id="" value="Cancel" onclick="submitForm('cancel')">
-              </div>
+                <input type="submit" name="" id="" value="OK" onclick="submitForm('ok')" class="ok-button">
+                <input type="submit" name="" id="" value="Cancel" onclick="submitForm('cancel')" class="cancel-button">
+            </div>
         </form>
     </div>
 
@@ -218,25 +215,6 @@
                 });
             }
         }
-
-        // document.getElementById("infoForm").addEventListener("submit", function(event) {
-        //     event.preventDefault();
-            
-        //     const fullName = document.getElementById("fullName").value;
-        //     const mssv = document.getElementById("mssv").value;
-        //     const gender = document.querySelector('input[name="gender"]:checked').value;
-        //     const year = document.getElementById("year").value;
-        //     const cclass = document.getElementById("cclass").value;
-        //     const eduLevel = document.getElementById("eduLevel").value;
-        //     const course = document.getElementById("course").value;
-        //     const program = document.getElementById("program").value;
-        //     const email = document.getElementById("email").value;
-        //     const khoa = document.getElementById("khoa").value;
-        //     const status = document.querySelector('input[name="status"]:checked').value;
-
-        //     window.location.href = `index.html?fullName=${encodeURIComponent(fullName)}&mssv=${mssv}&gender=${gender}&year=${year}&cclass=${cclass}&eduLevel=${eduLevel}&course=${course}&program=${program}&email=${email}&khoa=${khoa}&status=${status}`;
-
-        // });
     </script>
 </body>
 </html>
