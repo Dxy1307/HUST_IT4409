@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/info2.css">
 </head>
 <body>
     <table style="width: 100%;">
@@ -181,55 +182,113 @@
                         <div class="row">
                             <span class="dxeBase_Mulberry title">THÔNG TIN SINH VIÊN</span>
                             <span>
-                                <a href="./info2.html" id="editInfoLink" style="color: #343434; margin-left: 10px; font-size: 20px;">
+                                <a href="#" style="color: #343434; margin-left: 10px; font-size: 20px;">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                             </span>
                             <hr>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="dxpnlControl_Mulberry center">
-                                    <img src="./assets/img/avatar.jpg" alt="" style="width: 200px; box-shadow: 10px 10px 20px rgb(174, 216, 230);" class="thumbnail" id="avatar">
+                        
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="dxpnlControl_Mulberry center">
+                                        <img src="./assets/img/avatar.jpg" alt="" style="width: 200px; box-shadow: 10px 10px 20px rgb(174, 216, 230);" class="thumbnail" id="avatar">                                       
+                                    </div>
+                                    <div class="center">
+                                        <span class="dxeBase_Mulberry normalText">
+                                            <strong>MSSV:</strong><span id="mssv">20210275</span>
+                                        </span>
+                                    </div>
+                                    <form enctype="multipart/form-data" style="display: block;" class="edit-img">
+                                        <input type="file" id="imageUpload" accept="image/*">
+                                        <div class="btn-upload-img" onclick="onImgClick()">Upload</div>
+                                    </form>
                                 </div>
-                                <div class="center">
-                                    <span class="dxeBase_Mulberry normalText">
-                                        <strong>MSSV:</strong><span id="mssv">20210275</span>
-                                    </span>
-                                </div>
+    
+                                <form action="" id="infoForm">
+                                    <div class="col-md-4">
+                                        <span class="dxeBase_Mulberry normalText">
+                                            <label for="fullName"><em>Họ và tên&emsp;:</em></label> 
+                                            <input type="text" id="fullName" name="fullName" value="Nguyễn Đức Duy">
+        
+                                            <br>
+        
+                                            <label for="year"><em>Năm vào trường&emsp;:</em></label>
+                                            <input type="number" id="year" name="year" value="2021" min="1956" max="2024">
+        
+                                            <br>
+        
+                                            <label for="eduLevel"><em>Bậc đào tạo&emsp;:</em></label>
+                                            <input type="text" id="eduLevel" name="eduLevel" value="Đại học đại trà">
+        
+                                            <br>
+        
+                                            <label for="program"><em>Chương trình&emsp;:</em></label>
+                                            <input type="text" id="program" name="program" value="Kỹ thuật Máy tính 2021">
+        
+                                            <br>
+        
+                                            <label for="khoa"><em>Khoa/Viện quản lý&emsp;:</em></label>
+                                            <select id="khoa" name="khoa">
+                                                <option value="Trường Công Nghệ Thông Tin và Truyền Thông" selected>Trường Công Nghệ Thông Tin và Truyền Thông</option>
+                                                <option value="Trường Cơ Khí">Trường Cơ Khí</option>
+                                                <option value="Trường Điện - Điện Tử">Trường Điện - Điện Tử</option>
+                                                <option value="Trường Vật Liệu">Trường Vật Liệu</option>
+                                                <option value="Trường Hóa và Khoa Học Sự Sống">Trường Hóa và Khoa Học Sự Sống</option>
+                                                <option value="Trường Kinh Tế và Quản Lí">Trường Kinh Tế và Quản Lí</option>
+                                            </select>
+        
+                                            <br>
+        
+                                            <label for="status"><em>Tình trạng học tập&emsp;:</em></label>
+                                            <input type="radio" id="status" name="status" value="Học" checked>
+                                            <label for="hoc">Học</label>
+                                            <input type="radio" id="status" name="status" value="Bảo lưu">
+                                            <label for="baoLuu">Bảo lưu</label>
+                                            <input type="radio" id="status" name="status" value="Thôi học">
+                                            <label for="thoiHoc">Thôi học</label>
+        
+                                            <br>
+        
+                                        </span>
+                                    </div>
+        
+                                    <div class="col-md-4">
+                                        <span class="dxeBase_Mulberry normalText">
+                                            <label for="gender"><em>Giới tính&emsp;:</em></label>
+                                            <input type="radio" id="gender" name="gender" value="Nam" checked>
+                                            <label for="gender">Nam</label>
+                                            <input type="radio" id="gender" name="gender" value="Nữ">
+                                            <label for="gender">Nữ</label>
+        
+                                            <br>
+        
+                                            <label for="cclass"><em>Lớp&emsp;:</em></label>
+                                            <input type="text" id="cclass" name="cclass" value="Kỹ thuật máy tính 04-K66">
+        
+                                            <br>
+        
+                                            <label for="course"><em>Khóa học&emsp;:</em></label>
+                                            <input type="number" id="course" name="course" value="66" min="1" max="70">
+        
+                                            <br>
+        
+                                            <label for="email"><em>Email&emsp;:</em></label>
+                                            <input type="text" id="email" name="email" value="duy.nd210275@sis.hust.edu.vn">
+        
+                                            <br>
+                                        </span>
+                                    </div>
+        
+                                    <div class="button-container">
+                                        <input type="submit" name="" id="" value="OK" onclick="submitForm('ok')" class="ok-button">
+                                        <input type="submit" name="" id="" value="Cancel" onclick="submitForm('cancel')" class="cancel-button">
+                                        <input type="submit" name="" id="" value="Reset" onclick="submitForm('reset')" class="reset-button">
+                                    </div>
+                                </form>
                             </div>
-
-                            <div class="col-md-4">
-                                <span class="dxeBase_Mulberry normalText">
-                                    <em>Họ và tên&emsp;:</em> <strong id="fullName">Nguyễn Đức Duy</strong>
-                                    <br>
-                                    <em>Năm vào trường&emsp;:</em> <strong id="year">2021</strong>
-                                    <br>
-                                    <em>Bậc đào tạo&emsp;:</em> <strong id="eduLevel">Đại học đại trà</strong>
-                                    <br>
-                                    <em>Chương trình&emsp;:</em> <strong id="program">Kỹ thuật Máy tính 2021</strong>
-                                    <br>
-                                    <em>Khoa/Viện quản lý&emsp;:</em> <strong id="khoa">Trường Công nghệ thông tin và Truyền thông</strong>
-                                    <br>
-                                    <em>Tình trạng học tập&emsp;:</em> <strong id="status">Học</strong>
-                                    <br>
-                                </span>
-                            </div>
-
-                            <div class="col-md-4">
-                                <span class="dxeBase_Mulberry normalText">
-                                    <em>Giới tính&emsp;:</em> <strong id="gender">Nam</strong>
-                                    <br>
-                                    <em>Lớp&emsp;:</em> <strong id="cclass">Kỹ thuật máy tính 04-K66</strong>
-                                    <br>
-                                    <em>Khóa học&emsp;:</em> <strong id="course">66</strong>
-                                    <br>
-                                    <em>Email&emsp;:</em> <strong id="email">duy.nd210275@sis.hust.edu.vn</strong>
-                                    <br>
-                                </span>
-                            </div>
-                        </div>
+                        
 
                         <div class="row">
                             <span class="dxeBase_Mulberry title">THÔNG TIN HỌC TẬP</span>
@@ -332,6 +391,6 @@
         </tbody>
     </table>
 
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/info.js"></script>
 </body>
 </html>
