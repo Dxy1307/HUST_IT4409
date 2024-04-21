@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sinh viên</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/info.css">    
+</head>
+<body>
+    <div class="content">
+        
+        <form action="" id="infoForm">
+            <div class="SettingProfile">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="avatar">Ảnh đại diện:</label>
+                        </td>
+                        <td>
+                            <img src="./assets/img/avatar.jpg" alt="" style="width: 100px;" class="thumbnail">
+                            <!-- <input type="file" name="avatar" id="avatar" style="position: relative; top: -8px;"> -->
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="fullName">Họ và tên:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="fullName" name="fullName" value="Nguyễn Đức Duy">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="mssv">MSSV:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="mssv" class="mssv" name="mssv" value="20210275" min="" max="">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="">Giới tính:</label>
+                        </td>
+                        <td class="line">
+                            <input type="radio" id="gender" name="gender" value="Nam" checked>
+                            <label for="gender">Nam</label>
+                            <input type="radio" id="gender" name="gender" value="Nữ">
+                            <label for="gender">Nữ</label>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="year">Năm vào trường:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="year" name="year" value="2021" min="1956" max="2024">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="cclass">Lớp:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="cclass" name="cclass" value="Kỹ thuật máy tính 04-K66">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="eduLevel">Bậc đào tạo:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="eduLevel" name="eduLevel" value="Đại học đại trà">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="course">Khóa học:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="course" name="course" value="66" min="1" max="70">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="program">Chương trình:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="program" name="program" value="Kỹ thuật Máy tính 2021">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="email" name="email" value="duy.nd210275@sis.hust.edu.vn">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="khoa">Khoa/Viện quản lý:</label>
+                        </td>
+                        <td>
+                            <select id="khoa" name="khoa">
+                            <option value="Trường Công Nghệ Thông Tin và Truyền Thông" selected>Trường Công Nghệ Thông Tin và Truyền Thông</option>
+                            <option value="Trường Cơ Khí">Trường Cơ Khí</option>
+                            <option value="Trường Điện - Điện Tử">Trường Điện - Điện Tử</option>
+                            <option value="Trường Vật Liệu">Trường Vật Liệu</option>
+                            <option value="Trường Hóa và Khoa Học Sự Sống">Trường Hóa và Khoa Học Sự Sống</option>
+                            <option value="Trường Kinh Tế và Quản Lí">Trường Kinh Tế và Quản Lí</option>
+                            </select>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <label for="status">Tình trạng học:</label>
+                        </td>
+                        <td class="line">
+                            <input type="radio" id="status" name="status" value="Học" checked>
+                            <label for="hoc">Học</label>
+                            <input type="radio" id="status" name="status" value="Bảo lưu">
+                            <label for="baoLuu">Bảo lưu</label>
+                            <input type="radio" id="status" name="status" value="Thôi học">
+                            <label for="thoiHoc">Thôi học</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" name="" id="" value="OK" onclick="submitForm('ok')" class="ok-button">
+                <input type="submit" name="" id="" value="Cancel" onclick="submitForm('cancel')" class="cancel-button">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const ifullName = urlParams.get('ifullName');
+        const imssv = urlParams.get('imssv');
+        const igender = urlParams.get('igender');
+        const iyear = urlParams.get('iyear');
+        const icclass = urlParams.get('icclass');
+        const ieduLevel = urlParams.get('ieduLevel');
+        const icourse = urlParams.get('icourse');
+        const iprogram = urlParams.get('iprogram');
+        const iemail = urlParams.get('iemail');
+        const ikhoa = urlParams.get('ikhoa');
+        const istatus = urlParams.get('istatus');
+        
+        document.getElementById("fullName").value = ifullName;
+        document.getElementById("mssv").value = imssv;
+        const radioGender = document.getElementsByName("gender");
+        radioGender.forEach(radio => {
+            if(radio.value == igender)
+                radio.checked = true;
+            else radio.checked = false;
+        });
+        document.getElementById("year").value = iyear;
+        document.getElementById("cclass").value = icclass;
+        document.getElementById("eduLevel").value = ieduLevel;
+        document.getElementById("course").value = icourse;
+        document.getElementById("program").value = iprogram;
+        document.getElementById("email").value = iemail;
+        const options = document.getElementById('khoa').options;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === ikhoa) {
+                options[i].selected = true;
+                break;
+            }
+        }
+        const radioStatus = document.getElementsByName("status");
+        radioStatus.forEach(radio => {
+            if(radio.value == istatus)
+                radio.checked = true;
+            else radio.checked = false;
+        });
+
+        function submitForm(action) {
+            if(action == 'cancel') {
+                document.getElementById("infoForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+
+                    window.location.href = `index.html?fullName=${encodeURIComponent(ifullName)}&mssv=${imssv}&gender=${igender}&year=${iyear}&cclass=${icclass}&eduLevel=${ieduLevel}&course=${icourse}&program=${iprogram}&email=${iemail}&khoa=${ikhoa}&status=${istatus}`;
+                });
+            } else if(action == 'ok') {
+                document.getElementById("infoForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+            
+                    const fullName = document.getElementById("fullName").value;
+                    const mssv = document.getElementById("mssv").value;
+                    const gender = document.querySelector('input[name="gender"]:checked').value;
+                    const year = document.getElementById("year").value;
+                    const cclass = document.getElementById("cclass").value;
+                    const eduLevel = document.getElementById("eduLevel").value;
+                    const course = document.getElementById("course").value;
+                    const program = document.getElementById("program").value;
+                    const email = document.getElementById("email").value;
+                    const khoa = document.getElementById("khoa").value;
+                    const status = document.querySelector('input[name="status"]:checked').value;
+
+                    window.location.href = `index.html?fullName=${encodeURIComponent(fullName)}&mssv=${mssv}&gender=${gender}&year=${year}&cclass=${cclass}&eduLevel=${eduLevel}&course=${course}&program=${program}&email=${email}&khoa=${khoa}&status=${status}`;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

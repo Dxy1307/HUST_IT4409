@@ -1,0 +1,111 @@
+/* style.css */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Times;
+    font-size: 16px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 50px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Times;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.line label {
+    margin-right: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.button-container {
+    display: flex;  
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ok-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.ok-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
